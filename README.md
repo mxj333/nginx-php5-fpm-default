@@ -24,12 +24,12 @@ php-fpm 主配置文件
 
 修改为以下内容：
 
-# 指定时间内，如果失败的php-fpm 子进程数超过这个值，php-fpm主进程就优雅重启。
+指定时间内，如果失败的php-fpm 子进程数超过这个值，php-fpm主进程就优雅重启。
 ```
 emergency_restart_threshold = 10
 ```
 
-# 设定采用的时间跨度
+设定采用的时间跨度
 ```
 emergency_restart_interval = 1m
 ```
@@ -53,10 +53,11 @@ sudo service php5-fpm restart
 sudo add-apt-repository ppa:nginx/stable;
 sudo apt-get update
 sudo apt-get install iy nginx
+```
 
 cd /etc/nginx/sites-available/
 
-vim default.conf
+编辑 default.conf
 
 ```
 server {
