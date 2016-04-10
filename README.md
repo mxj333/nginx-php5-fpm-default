@@ -1,5 +1,5 @@
 # nginx-php5-fpm-default
-nginx-php5-fpm-default
+在ubuntu 14.04中安装最新版的nginx和php5-fpm
 
 更新系统及添加非root用户
 ```
