@@ -52,7 +52,7 @@ sudo service php5-fpm restart
 ```
 sudo add-apt-repository ppa:nginx/stable;
 sudo apt-get update
-sudo apt-get install iy nginx
+sudo apt-get install -y nginx
 
 
 cd /etc/nginx/sites-available/
