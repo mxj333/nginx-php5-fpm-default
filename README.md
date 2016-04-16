@@ -85,3 +85,32 @@ server {
 }
 
 ```
+
+
+If you do not have a domain name pointed at your server and you do not know your server's public IP address, you can find it by typing one of the following into your terminal:
+```
+ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
+```
+
+OR
+
+```
+curl http://icanhazip.com
+```
+
+###install mysql
+```
+sudo apt-get install mysql-server mysql-client -y 
+```
+First, we need to tell MySQL to generate the directory structure it needs to store its databases and information. We can do this by typing:
+首先，我们需要告诉MySQL来产生，它需要存储它的数据库和信息的目录结构。我们可以通过键入做到这一点
+```
+sudo mysql_install_db
+```
+
+Next, you'll want to run a simple security script that will prompt you to modify some insecure defaults. Begin the script by typing:
+接下来，你要运行一个简单的安全脚本，会提示你修改了一些不安全的默认值。首先输入脚本：
+
+```
+sudo mysql_secure_installation
+```
