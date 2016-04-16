@@ -1,7 +1,7 @@
 # nginx-php5-fpm-default
-在ubuntu 14.04中安装最新版的nginx和php5-fpm
+#在ubuntu 14.04中安装最新版的nginx和php5-fpm
 
-更新系统及添加非root用户
+###更新系统及添加非root用户
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -34,13 +34,13 @@ emergency_restart_threshold = 10
 emergency_restart_interval = 1m
 ```
 
-配置进程池
+###配置进程池
 
 让PHP-FPM加载/etc/php5/fpm/pool.d/目录中的各个进程池定义文件
 
 include=/etc/php5/fpm/pool.d/*.conf
 
-www.conf为PHP-FPM进程池默认配置文件。
+PHP-FPM进程池默认配置文件为:www.conf。
 
 
 重启PHP-FPM进程
@@ -48,16 +48,16 @@ www.conf为PHP-FPM进程池默认配置文件。
 sudo service php5-fpm restart
 ```
 
-安装nginx
+### 安装nginx
 ```
 sudo add-apt-repository ppa:nginx/stable;
 sudo apt-get update
 sudo apt-get install iy nginx
-```
+
 
 cd /etc/nginx/sites-available/
-
-编辑 default.conf
+```
+### 编辑 default.conf
 
 ```
 server {
@@ -86,7 +86,7 @@ server {
 
 ```
 
-
+### 查看IP
 If you do not have a domain name pointed at your server and you do not know your server's public IP address, you can find it by typing one of the following into your terminal:
 ```
 ip addr show eth0 | grep inet | awk '{ print $2; }' | sed 's/\/.*$//'
@@ -98,7 +98,7 @@ OR
 curl http://icanhazip.com
 ```
 
-###install mysql
+### install mysql
 ```
 sudo apt-get install mysql-server mysql-client -y 
 ```
